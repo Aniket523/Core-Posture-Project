@@ -58,3 +58,90 @@ If you are starting from scratch, run these commands in your project terminal to
 
 ```bash
 idf.py add-dependency "espressif/esp-box-3^3.0.3"
+idf.py add-dependency "lvgl/lvgl^8.3.0"
+
+2. Activating Advanced Fonts
+
+The UI requires specific Montserrat font sizes. You must enable these in the menuconfig or the compilation will fail.
+
+    Open the configuration menu:
+    Bash
+
+    idf.py menuconfig
+
+    Navigate to: Component config → LVGL configuration → Font usage
+
+    Enable (Check) the following options:
+
+        [x] Enable Montserrat 12
+
+        [x] Enable Montserrat 14
+
+        [x] Enable Montserrat 20
+
+    Press Q to Save and Quit.
+
+💻 Installation & Flashing
+Step 1: Clone the Repository
+Bash
+
+git clone [https://github.com/YourUsername/Core-Posture-Project.git](https://github.com/YourUsername/Core-Posture-Project.git)
+cd Core-Posture-Project
+
+Step 2: Flash the Wearable (Sender)
+
+    Navigate to the Sender code folder:
+    Bash
+
+cd Sender_Code_C3
+
+Set the target to ESP32-C3:
+Bash
+
+idf.py set-target esp32c3
+
+Build and Flash:
+Bash
+
+    idf.py build flash monitor
+
+Step 3: Flash the Display (Receiver)
+
+    Navigate to the Receiver code folder:
+    Bash
+
+cd ../Receiver_Code_S3
+
+Set the target to ESP32-S3:
+Bash
+
+idf.py set-target esp32s3
+
+Build and Flash:
+Bash
+
+    idf.py build flash monitor
+
+🧠 How It Works
+The "Blind Mode" Algorithm
+
+A common issue with haptic wearables is that the vibration motor shakes the accelerometer, creating "noise" that the system interprets as further movement.
+
+My Solution: I implemented a state machine in the Sender code.
+
+    Detect: When Pitch > 15°, the system flags a "Slouch."
+
+    Pause: It immediately stops reading the sensor.
+
+    Act: It fires the vibration motor for 200ms.
+
+    Wait: It waits 50ms for mechanical vibrations to settle.
+
+    Resume: Only then does it resume reading sensor data. This ensures the UI remains stable and accurate, even during active feedback.
+
+📸 Demo
+
+ youtube - https://youtube.com/shorts/flOXENCrFwQ?si=HMT9tRXpTAJVJGBG
+📜 License
+
+This project is open-source. Created by Aniket vishwakarma.
