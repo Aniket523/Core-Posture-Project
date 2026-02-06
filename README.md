@@ -4,8 +4,10 @@
 
 Unlike passive monitoring apps, Core Posture provides **immediate haptic feedback** (vibration) when you slouch, helping you retrain your muscle memory. It also features a "Blind Mode" algorithm to ensure accurate readings even while vibrating, and a built-in hydration tracker to keep you healthy.
 
-![Project Cover](https://github.com/YourUsername/Core-Posture-Project/blob/main/images/cover.jpg)
-*(Replace the link above with the link to your "Posture Good" photo)*
+![Project Cover](https://github.com/Aniket523/Core-Posture-Project/blob/main/1000073326.jpg)
+
+📸 Demo
+(https://www.youtube.com/shorts/flOXENCrFwQ)
 
 ## 🚀 Features
 * **Real-Time Slouch Detection:** Triggers an alert if forward tilt (Pitch) exceeds 15 degrees.
@@ -141,7 +143,7 @@ My Solution: I implemented a state machine in the Sender code.
 
 📸 Demo
 
- youtube - https://youtube.com/shorts/flOXENCrFwQ?si=HMT9tRXpTAJVJGBG
+ ![Project Cover](https://github.com/Aniket523/Core-Posture-Project/blob/main/1000073326.jpg)
 📜 License
 
 This project is open-source. Created by Aniket vishwakarma.
