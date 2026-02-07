@@ -87,7 +87,7 @@ The UI requires specific Montserrat font sizes. You must enable these in the men
 Step 1: Clone the Repository
 Bash
 
-git clone [https://github.com/Aniket523/Core-Posture-Project.git](https://github.com/Aniket523/Core-Posture-Project.git)
+git clone [](https://github.com/Aniket523/Core-Posture-Project.git)
 cd Core-Posture-Project
 
 Step 2: Flash the Wearable (Sender)
